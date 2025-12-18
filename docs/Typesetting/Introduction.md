@@ -56,12 +56,9 @@ targeted audience.
 - Automation tools (scripts, templates) exist to speed up repetitive work.
   Use them whenever possible.
 
-## Software and Subtitle Format
+## Subtitle Format
 
 The subtitle format we will be using is called `Advanced Sub Station Alpha` (*.ass).
 This was derived from another SSA format created by
 [Kotus](https://web.archive.org/web/20030618072944/http://www.eswat.demon.co.uk/).
 This is essentially a subtitle format made by fansubbers for the fansubbers.
-
-The software we will be using is called Aegisub, although we shall be using its
-fork for now.

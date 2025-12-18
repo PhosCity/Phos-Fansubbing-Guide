@@ -10,7 +10,7 @@ nav:
   - Typesetting Guide:
       - Background: Typesetting/Background.md
       - Introduction: Typesetting/Introduction.md
-  #     - Installation: Typesetting/Installation.md
+      - Installation: Typesetting/Installation.md
   #     - Aegisub Basics: Typesetting/Aegisub Basics.md
   #     - Basic ASS Tags: Typesetting/Basic ASS Tags.md
   #     - Edit Box: Typesetting/Edit Box.md
