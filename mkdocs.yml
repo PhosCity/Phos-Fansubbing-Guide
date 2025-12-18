@@ -23,7 +23,7 @@ nav:
       - Layers: Typesetting/Layers.md
       - Blur: Typesetting/Blur.md
       - Alpha: Typesetting/Alpha.md
-  #     - Clips: Typesetting/Clips.md
+      - Clips: Typesetting/Clips.md
   #     - Shapes: Typesetting/Shapes.md
   #     - Fade: Typesetting/Fade.md
   #     - Move: Typesetting/Move.md
