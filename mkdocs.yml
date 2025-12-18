@@ -28,7 +28,7 @@ nav:
       - Fade: Typesetting/Fade.md
       - Move: Typesetting/Move.md
       - Transform: Typesetting/Transform.md
-  #     - Perspective: Typesetting/Perspective.md
+      - Perspective: Typesetting/Perspective.md
   #     - Font: Typesetting/Font.md
   #     - Aegisub Script: Typesetting/Aegisub Scripts.md
   #     - Adding and Removing Tags: Typesetting/Adding and Removing Tags.md
