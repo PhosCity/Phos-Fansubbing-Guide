@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+mapfile -t guides < <(git diff-index --cached --name-only 'HEAD^{tree}' | awk -F/ '{print $NF}' | uniq | sed -e "s|.md$||g" -e 's/^./\U&/g' -e 's/ ./\U&/g' | awk '!a[$0]++')
+
+if ((${#guides[@]})) && ! head -1 "$1" | grep -q -e '^\[' -e '^fixup!' -e '^squash!'; then
+    sed -i '1s/^/['"$(
+        IFS=,
+        printf "%s" "${guides[*]}"
+    )"'] /' "$1"
+fi
