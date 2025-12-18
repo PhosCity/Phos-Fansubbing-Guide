@@ -43,10 +43,10 @@ nav:
       - Inner Shadow and Chromatic Abberation: Typesetting/Inner Shadow and Chromatic Abberation.md
       - Gimp: Typesetting/Gimp.md
       - Handling Lines: Typesetting/Handling Lines.md
+      - Examples: Typesetting/Examples.md
   #     - Grain: Typesetting/Grain.md
   #     - Text/Move Along Clip: Typesetting/Text or Move Along Clip.md
   #     - Miscellaneous: Typesetting/Miscellaneous.md
-  #     - Examples: Typesetting/Examples.md
 
 theme:
   name: material
