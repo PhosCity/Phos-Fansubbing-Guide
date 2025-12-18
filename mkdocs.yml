@@ -1,0 +1,116 @@
+# Project information
+site_name: Typesetting Guide
+site_url: https://mydomain.org/mysite
+site_author: PhosCity
+site_description: >-
+  Typesetting Guide in Aegisub
+
+nav:
+  - Home: index.md
+  # - Typesetting Guide:
+  #     - Background: Typesetting/Background.md
+  #     - Introduction: Typesetting/Introduction.md
+  #     - Installation: Typesetting/Installation.md
+  #     - Aegisub Basics: Typesetting/Aegisub Basics.md
+  #     - Basic ASS Tags: Typesetting/Basic ASS Tags.md
+  #     - Edit Box: Typesetting/Edit Box.md
+  #     - Subtitle Grid: Typesetting/Subtitle Grid.md
+  #     - Video Box: Typesetting/Video Box.md
+  #     - Positioning and Aligning Subtitles: Typesetting/Positioning and Aligning Subtitles.md
+  #     - Rotating Subtitles: Typesetting/Rotating Subtitles.md
+  #     - Text Shearing: Typesetting/Text Shearing.md
+  #     - Scale Subtitles: Typesetting/Scale Subtitles.md
+  #     - Layers: Typesetting/Layers.md
+  #     - Blur: Typesetting/Blur.md
+  #     - Alpha: Typesetting/Alpha.md
+  #     - Clips: Typesetting/Clips.md
+  #     - Shapes: Typesetting/Shapes.md
+  #     - Fade: Typesetting/Fade.md
+  #     - Move: Typesetting/Move.md
+  #     - Transform: Typesetting/Transform.md
+  #     - Perspective: Typesetting/Perspective.md
+  #     - Font: Typesetting/Font.md
+  #     - Aegisub Script: Typesetting/Aegisub Scripts.md
+  #     - Adding and Removing Tags: Typesetting/Adding and Removing Tags.md
+  #     - Applying Fade: Typesetting/Applying Fade.md
+  #     - Blur and Glow: Typesetting/Blur and Glow.md
+  #     - Masking: Typesetting/Masking.md
+  #     - Gradient: Typesetting/Gradient.md
+  #     - Frame by Frame: Typesetting/Frame by Frame.md
+  #     - Motion Tracking: Typesetting/Motion Tracking.md
+  #     - Motion Tracking Using Mocha: Typesetting/Motion Tracking Using Mocha.md
+  #     - Motion Tracking Using Blender: Typesetting/Motion Tracking Using Blender.md
+  #     - Inner Shadow and Chromatic Abberation: Typesetting/Inner Shadow and Chromatic Abberation.md
+  #     - Grain: Typesetting/Grain.md
+  #     - Gimp: Typesetting/Gimp.md
+  #     - Fold: Typesetting/Fold.md
+  #     - Text/Move Along Clip: Typesetting/Text or Move Along Clip.md
+  #     - Miscellaneous: Typesetting/Miscellaneous.md
+  #     - Examples: Typesetting/Examples.md
+
+theme:
+  name: material
+  features:
+    - navigation.instant
+    - navigation.instant.preview
+    - navigation.instant.progress
+    - navigation.instant.tracking
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.top
+    - navigation.path
+    - navigation.footer
+    - toc.follow
+    - search.suggest
+    - search.highlight
+    - content.tabs.link
+    - content.code.annotation
+    - content.code.copy
+  language: en
+  palette:
+    # Palette toggle for dark mode
+    - scheme: slate
+      primary: black
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to light mode
+    # Palette toggle for light mode
+    - scheme: default
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to dark mode
+
+markdown_extensions:
+  - attr_list
+  - admonition
+  - pymdownx.keys
+  - pymdownx.details
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.superfences
+  - pymdownx.arithmatex:
+      generic: true
+  - toc:
+      toc_depth: 3
+  - pymdownx.blocks.caption
+
+plugins:
+  - search
+  - tags
+
+extra:
+  analytics:
+    provider: google
+    property: !ENV GOOGLE_ANALYTICS_KEY
+
+extra_css:
+  - styles/extra.css
+  - https://unpkg.com/katex@0/dist/katex.min.css
+
+extra_javascript:
+  - javascripts/katex.js
+  - https://unpkg.com/katex@0/dist/katex.min.js
+  - https://unpkg.com/katex@0/dist/contrib/auto-render.min.js
