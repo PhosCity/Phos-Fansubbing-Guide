@@ -7,8 +7,8 @@ site_description: >-
 
 nav:
   - Home: index.md
-  # - Typesetting Guide:
-  #     - Background: Typesetting/Background.md
+  - Typesetting Guide:
+      - Background: Typesetting/Background.md
   #     - Introduction: Typesetting/Introduction.md
   #     - Installation: Typesetting/Installation.md
   #     - Aegisub Basics: Typesetting/Aegisub Basics.md
