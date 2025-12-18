@@ -26,7 +26,7 @@ nav:
       - Clips: Typesetting/Clips.md
       - Shapes: Typesetting/Shapes.md
       - Fade: Typesetting/Fade.md
-  #     - Move: Typesetting/Move.md
+      - Move: Typesetting/Move.md
   #     - Transform: Typesetting/Transform.md
   #     - Perspective: Typesetting/Perspective.md
   #     - Font: Typesetting/Font.md
