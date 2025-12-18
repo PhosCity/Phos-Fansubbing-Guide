@@ -30,7 +30,7 @@ nav:
       - Transform: Typesetting/Transform.md
       - Perspective: Typesetting/Perspective.md
       - Font: Typesetting/Font.md
-  #     - Aegisub Script: Typesetting/Aegisub Scripts.md
+      - Aegisub Script: Typesetting/Aegisub Scripts.md
   #     - Adding and Removing Tags: Typesetting/Adding and Removing Tags.md
   #     - Applying Fade: Typesetting/Applying Fade.md
   #     - Blur and Glow: Typesetting/Blur and Glow.md
