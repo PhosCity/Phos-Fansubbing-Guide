@@ -9,25 +9,21 @@ to arch1t3ct's fork.
 
 In order to install Aegisub, follow the steps below:
 
-1. Go to the [releases page of the repo](https://github.com/arch1t3cht/Aegisub/releases).
-1. Scroll down to the latest `Feature Release`. Currently it's `Feature Release 12`.
-   You will see the `Assets` section.
+1. Go to the [releases page of the repo](https://github.com/arch1t3cht/Aegisub/releases/tag/migration01-01).
+1. Scroll down to the `Assets` section.
    ![arch1t3ct's repo's release page](./assets/Installation/arch1t3ct_release_page.png)
 1. Here you will find a lot of binaries. Pick the one that is suitable for you
    and install.
 
 ## Windows
 
-!!! note
-
-    You will see that there are two types of Windows installer. One that says
-    wx.master and one that doesn't. The one with the wx.master will give you
-    a partial dark mode. It is partial because user still has to do a lot of work
-    to get full dark mode experience.
-
 Installation in Windows is relatively simple. It's just a matter of downloading
 and pressing `Next` in installation windows but here is a video that goes through
 the installation process.
+
+!!! note
+
+    The video below is slightly outdated but the process remains the same.
 
 <video width="2560" height="1600" controls>
   <source src="../assets/Installation/installation_windows.mp4" type="video/mp4">
