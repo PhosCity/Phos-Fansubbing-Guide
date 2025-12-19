@@ -1,9 +1,11 @@
 # Project information
-site_name: Typesetting Guide
-site_url: https://mydomain.org/mysite
+site_name: Phos's Fansubbing Guide
 site_author: PhosCity
 site_description: >-
-  Typesetting Guide in Aegisub
+  Fansubbing Guide by Phos
+
+repo_name: PhosCity/Phos-Fansubbing-Guide
+repo_url: https://github.com/PhosCity/Phos-Fansubbing-Guide
 
 nav:
   - Home: index.md
@@ -101,10 +103,10 @@ plugins:
   - search
   - tags
 
-extra:
-  analytics:
-    provider: google
-    property: !ENV GOOGLE_ANALYTICS_KEY
+# extra:
+#   analytics:
+#     provider: google
+#     property: !ENV GOOGLE_ANALYTICS_KEY
 
 extra_css:
   - styles/extra.css
