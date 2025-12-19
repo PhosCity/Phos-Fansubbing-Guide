@@ -119,3 +119,5 @@ shadow. For the sign above, you use perspective tool to align the text, add
 shadow to the text, use `Shapery` to apply inner shadow. Apply horizontal gradient
 to both the fill and the shadow separately. There is also the white highlight in
 the bottom.
+
+TODO: Add example
