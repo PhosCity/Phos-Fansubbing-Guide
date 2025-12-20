@@ -1,0 +1,14 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 800 !important; /* or 700, 900, etc. */
+}
+
+.md-typeset h2 {
+  border-top: 1px solid var(--md-default-fg-color);
+  padding-top: 0.75rem;
+  margin-top: 2rem;
+}

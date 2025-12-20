@@ -1,0 +1,2068 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Fansubbing Guide by Phos">
+      
+      
+        <meta name="author" content="PhosCity">
+      
+      
+      
+        <link rel="prev" href="../Aegisub%20Scripts/">
+      
+      
+        <link rel="next" href="../Applying%20Fade/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>Adding and Removing Tags - Phos's Fansubbing Guide</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../styles/extra.css">
+    
+      <link rel="stylesheet" href="https://unpkg.com/katex@0/dist/katex.min.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#adding-and-removing-tags" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Phos&#39;s Fansubbing Guide" class="md-header__button md-logo" aria-label="Phos's Fansubbing Guide" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Phos's Fansubbing Guide
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Adding and Removing Tags
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/PhosCity/Phos-Fansubbing-Guide" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    PhosCity/Phos-Fansubbing-Guide
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../Background/" class="md-tabs__link">
+          
+  
+  
+  Typesetting Guide
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Phos&#39;s Fansubbing Guide" class="md-nav__button md-logo" aria-label="Phos's Fansubbing Guide" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Phos's Fansubbing Guide
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/PhosCity/Phos-Fansubbing-Guide" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    PhosCity/Phos-Fansubbing-Guide
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Typesetting Guide
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Typesetting Guide
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Background/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Background
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Introduction/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introduction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Installation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Installation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Aegisub%20Basics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aegisub Basics
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Basic%20ASS%20Tags/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Basic ASS Tags
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Edit%20Box/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Edit Box
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Subtitle%20Grid/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Subtitle Grid
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Video%20Box/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Video Box
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Positioning%20and%20Aligning%20Subtitles/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Positioning and Aligning Subtitles
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Rotating%20Subtitles/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Rotating Subtitles
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Text%20Shearing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Text Shearing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Scale%20Subtitles/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Scale Subtitles
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Layers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Layers
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Blur/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Blur
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Alpha/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Alpha
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Clips/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Clips
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Shapes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Shapes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Fade/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fade
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Move/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Move
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Transform/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Transform
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Perspective/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Perspective
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Font/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Font
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Aegisub%20Scripts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aegisub Script
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Adding and Removing Tags
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Adding and Removing Tags
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#edit-tags" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Edit Tags
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Edit Tags">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#adding-tags-on-empty-line" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Adding Tags on Empty Line
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#addingmodifying-tags-on-line" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Adding/Modifying Tags on Line
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lines-with-multiple-tag-blocks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lines with multiple tag blocks
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#addingmodifying-tags-to-multiple-line" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Adding/Modifying Tags to Multiple Line
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#removing-tags" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Removing Tags
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Removing Tags">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#remove-all-button" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Remove All button
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#remove-tags-button" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Remove Tags button
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#remove-group-button" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Remove Group button
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Applying%20Fade/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Applying Fade
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Blur%20and%20Glow/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Blur and Glow
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Masking/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Masking
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Gradient/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gradient
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Frame%20by%20Frame/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Frame by Frame
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Motion%20Tracking/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Motion Tracking
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Motion%20Tracking%20Using%20Mocha/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Motion Tracking Using Mocha
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Motion%20Tracking%20Using%20Blender/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Motion Tracking Using Blender
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Inner%20Shadow%20and%20Chromatic%20Abberation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inner Shadow and Chromatic Abberation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Gimp/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gimp
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Handling%20Lines/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Handling Lines
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Examples/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Examples
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#edit-tags" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Edit Tags
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Edit Tags">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#adding-tags-on-empty-line" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Adding Tags on Empty Line
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#addingmodifying-tags-on-line" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Adding/Modifying Tags on Line
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lines-with-multiple-tag-blocks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lines with multiple tag blocks
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#addingmodifying-tags-to-multiple-line" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Adding/Modifying Tags to Multiple Line
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#removing-tags" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Removing Tags
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Removing Tags">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#remove-all-button" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Remove All button
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#remove-tags-button" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Remove Tags button
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#remove-group-button" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Remove Group button
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+  
+
+
+  <nav class="md-path" aria-label="Navigation" >
+    <ol class="md-path__list">
+      
+        
+  
+  
+    <li class="md-path__item">
+      <a href="../.." class="md-path__link">
+        
+  <span class="md-ellipsis">
+    Home
+  </span>
+
+      </a>
+    </li>
+  
+
+      
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../Background/" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    Typesetting Guide
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ol>
+  </nav>
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="adding-and-removing-tags">Adding and Removing Tags</h1>
+<p>Now that we have learned what Aegisub scripts are, we will now be learning how
+we use scripts to do various things. In this page, let's learn how to add and
+remove tags. You didn't think we would type the tags manually, did you?</p>
+<p>Typing tags by hand is a bad idea for three specific reasons:</p>
+<ol>
+<li>They take a long time.</li>
+<li>You will inevitably make typos.</li>
+<li>Even a moderately complex typesetted line will have a lots of tags. Searching
+   the exact tag you want to modify in <code>Edit Box</code> is pain in the ass.</li>
+</ol>
+<p>That is why, except the tags where it makes sense to use tools provided by
+Aegisub, we will be using script to add tags. Not only adding tags to line but
+also modifying tags that are already in the line.</p>
+<h2 id="edit-tags">Edit Tags</h2>
+<p>We will be using a script made by me called <code>Edit Tags</code> to add and modify the
+tags in line.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>There is another popular script made by unanimated called <code>HYDRA</code> that is
+also used for adding tags. If you want to use HYDRA instead, you can follow its
+<a href="https://unanimated.github.io/ts/scripts-manuals.htm#hydra">manual</a>.</p>
+</div>
+<!-- There is a [full guide](https://phoscity.github.io/Aegisub-Scripts/Edit%20Tags/) -->
+<!-- for this script so I highly suggest you read it. I will demonstrate its usage -->
+<!-- while assuming you read that guide. -->
+
+<h3 id="adding-tags-on-empty-line">Adding Tags on Empty Line</h3>
+<p>Let's say you open the script in an empty line. The script's GUI will look like
+this.</p>
+<p><img alt="edit tags gui" src="../assets/Adding%20and%20Removing%20Tags/edit_tags_gui_empty.png" /></p>
+<p>There is a checkbox, tag's name and then another box that allows you to change
+the tag's value. But some tags already have some value. You can tell from the
+gui above that this text has border, shadow, white fill, alignment of 2, uses
+Arial font and so on. Where did these value come from? They came from the style
+of the line.</p>
+<p>In order to add tags, you simply check the box, and change the tag value for all
+the tags that you want. When you click <code>Apply</code> button, the changes you made will
+be added to the line.</p>
+<h3 id="addingmodifying-tags-on-line">Adding/Modifying Tags on Line</h3>
+<p>Now, let's take a line that already has some text and tags and open the script
+on that line.</p>
+<p><FONT COLOR="#B58900">{</FONT><FONT COLOR="#D33682">\</FONT><b><FONT COLOR="#D33682">pos</FONT></b><b><FONT COLOR="#2AA198">(902,509)<FONT COLOR="#D33682"></FONT></b>\</FONT><b><FONT COLOR="#D33682">fscx</FONT></b><b><FONT COLOR="#2AA198">200</FONT></b><FONT COLOR="#D33682">\</FONT><b><FONT COLOR="#D33682">fscy</FONT></b><b><FONT COLOR="#2AA198">200</FONT></b><FONT COLOR="#D33682">\</FONT><b><FONT COLOR="#D33682">bord</FONT></b><b><FONT COLOR="#2AA198">5</FONT></b><FONT COLOR="#D33682">\</FONT><b><FONT COLOR="#D33682">1c</FONT></b><b><FONT COLOR="#2AA198">&amp;H1718C3&amp;<FONT COLOR="#D33682"></FONT></b>\</FONT><b><FONT COLOR="#D33682">blur</FONT></b><b><FONT COLOR="#2AA198">1</FONT></b><FONT COLOR="#B58900">}</FONT>I am not amused</p>
+<p><img alt="edit tags gui non empty" src="../assets/Adding%20and%20Removing%20Tags/edit_tags_gui_non_empty.png" /></p>
+<p>You will see that the tags that are already present in the line are ticked. Here
+you can do three things:</p>
+<ol>
+<li>Change the values of ticked tags to modify the values of these tags.</li>
+<li>Tick the unticked tags to insert those tags in the line.</li>
+<li>Untick the ticked tags to remove those tags from the line.</li>
+</ol>
+<h3 id="lines-with-multiple-tag-blocks">Lines with multiple tag blocks</h3>
+<p>Now imagine you have the following line where you have two tag sections and two
+text sections.</p>
+<p><FONT COLOR="#B58900">{</FONT><FONT COLOR="#D33682">\</FONT><b><FONT COLOR="#D33682">bord</FONT></b><b><FONT COLOR="#2AA198">5</FONT></b><FONT COLOR="#D33682">\</FONT><b><FONT COLOR="#D33682">blur</FONT></b><b><FONT COLOR="#2AA198">0.8</FONT></b><FONT COLOR="#B58900">}</FONT>First Section<FONT COLOR="#B58900">{</FONT><FONT COLOR="#D33682">\</FONT><b><FONT COLOR="#D33682">fn</FONT></b><b><FONT COLOR="#2AA198">Knorke</FONT></b><FONT COLOR="#D33682">\</FONT><b><FONT COLOR="#D33682">bord</FONT></b><b><FONT COLOR="#2AA198">2.72</FONT></b><FONT COLOR="#D33682">\</FONT><b><FONT COLOR="#D33682">c</FONT></b><b><FONT COLOR="#2AA198">&amp;H69594D&amp;</FONT></b><FONT COLOR="#B58900">}</FONT>Second Section</p>
+<p>Then the GUI produced will be something like this:</p>
+<p><img alt="edit tags gui multiple" src="../assets/Adding%20and%20Removing%20Tags/edit_tags_gui_multiple.png" /></p>
+<p>It looks just like before but there are two major difference:</p>
+<ol>
+<li>There is now a new drop-down in the bottom of the GUI that consists of all
+   sections of the line.</li>
+<li>There is a new button called <code>Switch</code> that didn't exist before.</li>
+</ol>
+<p>You will also notice in the top-left of the GUI, <code>SECTION 1/2</code> indicates that first
+section of the two is currently selected i.e. we are only working in this section:</p>
+<p><FONT COLOR="#B58900">{</FONT><FONT COLOR="#D33682">\</FONT><b><FONT COLOR="#D33682">bord</FONT></b><b><FONT COLOR="#2AA198">5</FONT></b><FONT COLOR="#D33682">\</FONT><b><FONT COLOR="#D33682">blur</FONT></b><b><FONT COLOR="#2AA198">0.8</FONT></b><FONT COLOR="#B58900">}</FONT>First Section</p>
+<p>The ticked tags in the GUI also reflects the first tag section. Any changes you
+make in this GUI will also only apply to the first tag section.</p>
+<p>In the drop-down at the bottom, you will notice that the next section is already
+selected. If you press Switch button now, you will now switch to the next section.</p>
+<p><img alt="edit tags gui multiple" src="../assets/Adding%20and%20Removing%20Tags/edit_tags_gui_multiple_2.png" /></p>
+<p>The gui above represents only the second section i.e. <FONT COLOR="#B58900">{</FONT><FONT COLOR="#D33682">\</FONT><b><FONT COLOR="#D33682">fn</FONT></b><b><FONT COLOR="#2AA198">Knorke</FONT></b><FONT COLOR="#D33682">\</FONT><b><FONT COLOR="#D33682">bord</FONT></b><b><FONT COLOR="#2AA198">2.72</FONT></b><FONT COLOR="#D33682">\</FONT><b><FONT COLOR="#D33682">c</FONT></b><b><FONT COLOR="#2AA198">&amp;H69594D&amp;</FONT></b><FONT COLOR="#B58900">}</FONT>Second Section</p>
+<p>The changes you made to the tags in the first tag section is not lost on switch.
+You can switch back and forth between sections, make changes to tags as you switch
+and when you finally click Apply button, the changes you made to each sections will
+apply to respective tag sections.</p>
+<p>You can select any section in the drop-down to switch directly to that section. You
+don't have to switch in chronological order. At this point, it should be clear to
+you how you can make granular change to any section in your line.</p>
+<h2 id="addingmodifying-tags-to-multiple-line">Adding/Modifying Tags to Multiple Line</h2>
+<p>When you select multiple lines and run the script, you cannot make the granular
+changes like you could above (i.e. this  is similar to using the script HYDRA).
+The gui looks like this:</p>
+<p><img alt="edit tags hydra" src="../assets/Adding%20and%20Removing%20Tags/edit_tags_gui_hydra.png" /></p>
+<p>You tick the tags, change the value and click Apply. It will modify or insert
+those tags in all selected lines. There is really nothing more to this mode
+other than this section:</p>
+<p><img alt="edit tags hydra apply" src="../assets/Adding%20and%20Removing%20Tags/edit_tags_hydra_apply.png" width="300" /></p>
+<p>Here you can select which tag section, layer or style and the tags will only apply
+to those selection only. By default, it will apply to start tag section (<strong>first
+tag block of the line</strong>), all layers and all styles.</p>
+<h2 id="example">Example</h2>
+<!-- {\pos(1392,213.644)\fnFOT-Matisse Pro Toaru\fs67.5\c&HD66508&\blur0.75
+\fad(0,436)}Confess -->
+
+<figure>
+<p><img alt="example 1" src="../assets/Adding%20and%20Removing%20Tags/Example1.png" /></p>
+<figcaption>
+<p><a href="https://anilist.co/anime/101921/Kaguyasama-wa-Kokurasetai-Tensaitachi-no-Renai-Zunousen/">Kaguya-sama: Love is War</a> Episode 1: 0:00:00.52</p>
+</figcaption>
+</figure>
+<video width="2560" height="1554" controls>
+    <source src="../assets/Adding and Removing Tags/use_edit_tags.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+
+<p>As you can see above, I used Aegisub tools to add position and font since it is
+easier to use them to add those tags but for any other tag like <code>\c</code>, <code>\blur</code>,
+<code>\bord</code>, <code>\shad</code>, <code>fscx</code> and <code>fscy</code>, I used <code>Edit Tags</code> script to add all of
+them at once. Result looks like this:</p>
+<p><img alt="example 1 result" src="../assets/Adding%20and%20Removing%20Tags/example_1_result.png" /> </p>
+<h2 id="removing-tags">Removing Tags</h2>
+<p>If you are working in a single line and you are adding/modifying tags anyway,
+I suggest you use <code>Edit Tags</code> script because removing a tag is as easy as
+unticking a tag.</p>
+<p>However, if you're only trying to removing tags or are working in multiple
+lines, I recommend you to use an script that is specifically made to remove
+tags.</p>
+<p>We will be using a script made by me called <code>Remove Tags</code> to do so. Install it
+using Dependency Control and immediately bind it to a hotkey like you did with
+<code>Edit Tags</code> script. I bind it to key <code>R</code> in <code>Subtitle Grid</code>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>There is another popular script made by unanimated called <code>Script Cleanup</code> that
+is also used for removing tags. If you want to use <code>Script Cleanup</code> instead,
+you can follow its
+<a href="https://unanimated.github.io/ts/scripts-manuals.htm#cleanup">manual</a>.</p>
+</div>
+<p><img alt="remove tags gui" src="../assets/Adding%20and%20Removing%20Tags/remove_tags_gui.png" /></p>
+<p>This script deals with all things related to removing tags from the line. When you
+select the lines and run this script, GUI of this script is dynamically generated
+i.e. only tags that are available in the selected lines are available for you to
+remove. The GUI from the image above is not what you'll see when you run it.</p>
+<h3 id="remove-all-button"><code>Remove All</code> button</h3>
+<ul>
+<li>If you simply click the <code>Remove All</code> button, it removes all the tags form the selected lines.</li>
+<li>If you check <code>Start Tags</code> in the top row and then press <code>Remove All</code> button, it removes all start tags from selected lines.</li>
+<li>Similarly, checking <code>Inline Tags</code> in top row removes all inline tags.</li>
+</ul>
+<h3 id="remove-tags-button"><code>Remove Tags</code> button</h3>
+<ul>
+<li>All the tags that you individually tick would be removed.</li>
+<li>If <code>Start tags</code> is checked, the selected tags will only be removed from start tags.</li>
+<li>If <code>Inline tags</code> is checked, the selected tags will only be removed from inline tags.</li>
+<li>If <code>Transform</code> is checked, the selected tags will only be removed from transforms.</li>
+<li>If <code>Inverse</code> is checked, all the tags except the selected ones will be deleted.</li>
+</ul>
+<h3 id="remove-group-button"><code>Remove Group</code> button</h3>
+<p>This button executes the things you select in the left column and is mostly used to delete groups of tags at once. Staying true to it's mission, the script also dynamically creates this section. Which means that if your selection does not contain any color tags for example, the option to remove color tags won't be available. You can also tick <code>Start Tag</code> or <code>Inline Tag</code> the top row and only remove the tag group from start tag block or inline tag block only. The groups available are:</p>
+<ul>
+<li>All color tags (c, 1c, 2c, 3c, 4c)</li>
+<li>All alpha tags (alpha, 1a, 2a, 3a, 4a)</li>
+<li>All rotation tags (frz, frx, fry)</li>
+<li>All scale tags (fs, fscx, fscy)</li>
+<li>All perspective tags (frz, frx, fry, fax, fay, org)</li>
+<li>All inline tags except last (useful for undoing gradient)</li>
+</ul>
+<!-- TODO (Maybe): An option to select and remove each individual transform tags. -->
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../Aegisub%20Scripts/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Aegisub Script">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Aegisub Script
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../Applying%20Fade/" class="md-footer__link md-footer__link--next" aria-label="Next: Applying Fade">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Applying Fade
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.instant", "navigation.instant.preview", "navigation.instant.progress", "navigation.instant.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.top", "navigation.path", "navigation.footer", "toc.follow", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../javascripts/katex.js"></script>
+      
+        <script src="https://unpkg.com/katex@0/dist/katex.min.js"></script>
+      
+        <script src="https://unpkg.com/katex@0/dist/contrib/auto-render.min.js"></script>
+      
+    
+  </body>
+</html>
