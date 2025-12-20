@@ -374,3 +374,57 @@ background since the movement was linear. Then I created the white mask over it.
         <source src="../assets/Masking/fade_mask_background_mask_and_text.mp4" type="video/mp4">
     Your browser does not support the video tag.
     </video>
+
+## Multiple Drawing Commands
+
+A single drawing command starts with the command `m` and ends only when the next
+`m` command is encountered. Aegisub's tools only allow you to draw a single
+drawing command so if you want to draw multiple drawing commands, you'd have to
+do it manually by typing.
+
+You could of course draw multiple shapes in multiple lines and merge them as I
+demonstrated above. However, there is a better way. We will be using a script
+called `New Clip Shape` by petzku. As soon as you install it from Dependency
+Control, bind it to a hotkey but not in `Subtitle Grid` section but in `Video`
+section. This is because as we are drawing clip, we want to press this hotkey to
+start a new shape. I personally bind it to letter ++"n"++ in `Video` section.
+
+1. Draw the first shape normally using clip.
+1. After you draw the first shape, draw the first point of next shape. _It will
+   look odd since the last point of the first shape and first point of new shape
+   are connected_
+1. Press the hotkey that runs the script `New Clip Shape`. This will disconnect
+   the last point of the first shape and first point of new shape. _All this is
+   doing is inserting `m` before the last coordinate._
+1. Continue drawing the second shape.
+1. Repeat.
+
+<video width="2560" height="1546" controls>
+    <source src="../assets/Masking/new_clip_shape.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+
+### Masks with Hole
+
+If you want to draw masks with hole, you could again use Shapery like I
+demonstrated above or you could draw the clip in such a way that creates holes.
+You could draw the clip in clockwise direction or anti-clockwise direction. Most
+of the time, it would not make much of a difference but if you draw shapes in
+the same line in opposite direction, it will create a hole in the shape.
+
+You could start drawing clockwise and then draw an anti-clockwise hole or vice versa.
+
+![mask with hole](./assets/Masking/mask_with_hole_example.png)
+///caption
+[Hoshikuzu Telepath](https://anilist.co/anime/155419/Hoshikuzu-Telepath/) Episode 06: 00:09:35
+///
+
+Take this example. When you draw the shape above, you would cover the notes as
+well. When you draw the clip here, you can at the same time draw the holes too.
+I'm doing sloppy job drawing clips. Please be better than me when you are
+actually typesetting.
+
+<video width="2560" height="1546" controls>
+    <source src="../assets/Masking/mask_with_hole_result.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
